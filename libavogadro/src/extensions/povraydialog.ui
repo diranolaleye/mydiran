@@ -1,0 +1,259 @@
+<ui version="4.0" >
+ <class>POVRayDialog</class>
+ <widget class="QDialog" name="POVRayDialog" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>357</width>
+    <height>285</height>
+   </rect>
+  </property>
+  <property name="sizePolicy" >
+   <sizepolicy vsizetype="MinimumExpanding" hsizetype="Preferred" >
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle" >
+   <string>POV-Ray Export</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" >
+   <item row="0" column="1" colspan="2" >
+    <layout class="QHBoxLayout" name="horizontalLayout_4" >
+     <item>
+      <widget class="QLineEdit" name="fileName" />
+     </item>
+     <item>
+      <widget class="QPushButton" name="selectFileName" >
+       <property name="text" >
+        <string>Select...</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="1" colspan="2" >
+    <layout class="QHBoxLayout" name="horizontalLayout" >
+     <item>
+      <widget class="QLineEdit" name="dimX" />
+     </item>
+     <item>
+      <widget class="QLineEdit" name="dimY" />
+     </item>
+     <item>
+      <spacer name="horizontalSpacer" >
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0" >
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="6" column="2" >
+    <layout class="QHBoxLayout" name="horizontalLayout_6" >
+     <item>
+      <widget class="QLineEdit" name="povrayPath" >
+       <property name="text" >
+        <string>povray</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="7" column="2" >
+    <layout class="QHBoxLayout" name="horizontalLayout_5" >
+     <item>
+      <widget class="QLineEdit" name="command" />
+     </item>
+    </layout>
+   </item>
+   <item row="8" column="0" colspan="3" >
+    <spacer name="verticalSpacer_2" >
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType" >
+      <enum>QSizePolicy::MinimumExpanding</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>20</width>
+       <height>0</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="9" column="0" colspan="3" >
+    <layout class="QHBoxLayout" name="horizontalLayout_2" >
+     <item>
+      <spacer name="horizontalSpacer_2" >
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0" >
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="render" >
+       <property name="text" >
+        <string>Render</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="close" >
+       <property name="text" >
+        <string>Close</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="0" >
+    <widget class="QLabel" name="label_4" >
+     <property name="text" >
+      <string>Filename:</string>
+     </property>
+     <property name="buddy" >
+      <cstring>dimX</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" >
+    <widget class="QLabel" name="label" >
+     <property name="text" >
+      <string>Resolution:</string>
+     </property>
+     <property name="buddy" >
+      <cstring>dimX</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="3" >
+    <widget class="QCheckBox" name="antialias" >
+     <property name="toolTip" >
+      <string>Use full scene antialiasing</string>
+     </property>
+     <property name="text" >
+      <string>Antialias</string>
+     </property>
+     <property name="checked" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="3" >
+    <widget class="QCheckBox" name="transparency" >
+     <property name="toolTip" >
+      <string>Set the background color to be transparent</string>
+     </property>
+     <property name="text" >
+      <string>Alpha transparency</string>
+     </property>
+     <property name="checked" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" >
+    <widget class="QLabel" name="label_5" >
+     <property name="text" >
+      <string>Command:</string>
+     </property>
+     <property name="buddy" >
+      <cstring>dimX</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="3" >
+    <widget class="QCheckBox" name="renderDirect" >
+     <property name="toolTip" >
+      <string>Render the molecule directly using command line POV-Ray</string>
+     </property>
+     <property name="text" >
+      <string>Render using POV-Ray</string>
+     </property>
+     <property name="checked" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="3" >
+    <widget class="QCheckBox" name="keepSource" >
+     <property name="toolTip" >
+      <string>Keep the POV-Ray source after rendering has completed</string>
+     </property>
+     <property name="text" >
+      <string>Keep POV-Ray source after rendering</string>
+     </property>
+     <property name="checked" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" >
+    <widget class="QLabel" name="label_6" >
+     <property name="text" >
+      <string>Path:</string>
+     </property>
+     <property name="buddy" >
+      <cstring>dimX</cstring>
+     </property>
+    </widget>
+   </item>
+  </layout>
+  <zorder>label_4</zorder>
+  <zorder>label</zorder>
+  <zorder>antialias</zorder>
+  <zorder>transparency</zorder>
+  <zorder>label_5</zorder>
+  <zorder>renderDirect</zorder>
+  <zorder>keepSource</zorder>
+  <zorder>label_6</zorder>
+ </widget>
+ <tabstops>
+  <tabstop>fileName</tabstop>
+  <tabstop>selectFileName</tabstop>
+  <tabstop>dimX</tabstop>
+  <tabstop>dimY</tabstop>
+  <tabstop>antialias</tabstop>
+  <tabstop>transparency</tabstop>
+  <tabstop>keepSource</tabstop>
+  <tabstop>renderDirect</tabstop>
+  <tabstop>povrayPath</tabstop>
+  <tabstop>command</tabstop>
+  <tabstop>render</tabstop>
+  <tabstop>close</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>close</sender>
+   <signal>clicked()</signal>
+   <receiver>POVRayDialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>369</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>206</x>
+     <y>105</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
